@@ -42,6 +42,21 @@ public class Index {
         WebElement a2 = wd.findElement(By.cssSelector("[href='#item2']"));
         WebElement input1 = wd.findElement(By.cssSelector("[name='name']"));
         WebElement inputS = wd.findElement(By.name("name"));
+
+        //By.linkText By.partialLinkText
+        WebElement el19 = wd.findElement(By.linkText("item1"));
+        WebElement el20 = wd.findElement(By.partialLinkText("m 1"));
+
+        WebElement inp = wd.findElement(By.cssSelector("[placeholder = 'Type your name']"));
+        //start name attribute
+        WebElement inp1 = wd.findElement(By.cssSelector("[placeholder ^='Type']"));
+        //end name attribute
+        WebElement inp2 = wd.findElement(By.cssSelector("[placeholder $= 'name']"));
+
+        //contains name
+        WebElement inp3 = wd.findElement(By.cssSelector("[placeholder *= 'your']"));
+
+
     }
 
 }
