@@ -24,6 +24,8 @@ public class Index {
         //Canada
         WebElement canada = wd.findElement(By.cssSelector("tr:nth-child(3)>td:last-child"));
         Assert.assertEquals(canada.getText(),"Canada");
+        WebElement canada1 = wd.findElement(By.xpath("//td[text()= 'canada']"));
+
     }
 
 
