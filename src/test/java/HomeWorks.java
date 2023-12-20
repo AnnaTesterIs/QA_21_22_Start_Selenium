@@ -121,7 +121,25 @@ public class HomeWorks {
         WebElement el8 = wd.findElement(By.xpath("//a[@href = '/login']/preceding-sibling::h1"));
         List<WebElement>list2 = wd.findElements(By.xpath("//a[@href = 'login']/preceding-sibling::a"));
 
+    }
 
+    @Test
+    public void innerText() {
+        WebElement element = wd.findElement(By.cssSelector("[name='login']"));
+        String text = element.getText(); //get from innerText
+        System.out.println(text);
+
+        WebElement form = wd.findElement(By.xpath("//form"));
+        String textForm = form.getText();
+
+        System.out.println("*********************");
+        System.out.println(textForm);
+
+        WebElement html = wd.findElement(By.tagName("html"));
+        String textAll = html.getText();
+        System.out.println("*********************");
+        System.out.println(textAll);
 
     }
+
 }
